@@ -1,38 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Catamaran", sans-serif;
+}
+
 .App {
+  background-image: url(./Assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start,
+.next {
+  padding: 5px 30px;
+  background-color: #677cf7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.start:hover {
+  background-color: #4e64dd;
+  color: #fff;
+}
+
+.start:active {
+  scale: 0.9;
+}
+
+.score {
+  color: #fff;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.title {
+  font-family: fantasy;
+  background-size: 100%;
+  filter: drop-shadow(2px 2px #677cf7);
+  font-size: 70px;
   text-align: center;
+  margin: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.number {
+  margin: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.questions {
+  font-size: 24px;
+  margin: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.questionCard {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 400px;
 }
 
-.App-link {
-  color: #61dafb;
+.answerBtn {
+  background-color: #677cf7;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
+}
+.answerBtn::after {
+  content: "";
+  background-color: red;
+  border: none;
+  margin: 2px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.answerBtn:active {
+  scale: 0.98;
+}
+
+.correctAnswer {
+  background-color: green;
+}
+.wrongAnswer {
+  background-color: red;
 }
